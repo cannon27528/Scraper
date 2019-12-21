@@ -46,19 +46,21 @@ var scrape = function() {
 
         // Initialize an object we will push to the articles array
         var dataToAdd = {
-         
-         FIXME: //See solution in  Chapter 18 activty 11 Scraping into a DB
-         articles.push(dataToAdd)
-        }
-      };
+          headline: headNeat,
+          summary: sumNeat,
+          url: "https://www.nytimes.com" + url
+          
+        };
 
         // Push new article into articles array
         articles.push(dataToAdd);
       }
-    );
+    });
+    
     return articles;
   });
 };
 
 // Export the function, so other files in our backend can use it
 module.exports = scrape;
+
