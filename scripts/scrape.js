@@ -9,7 +9,7 @@ var cheerio = require("cheerio");
 var scrape = function() {
 
   // Scrape the NYTimes website
-  return axios.get( TODO: "ENTER THE WEBSITE URL HERE").then(function(res) {
+  return axios.get("https://www.nytimes.com").then(function(res) {
     var $ = cheerio.load(res.data);
     console.log("scraping");
     // Make an empty array to save our article info
@@ -48,12 +48,14 @@ var scrape = function() {
         var dataToAdd = {
          
          FIXME: //See solution in  Chapter 18 activty 11 Scraping into a DB
-        };
+         articles.push(dataToAdd)
+        }
+      };
 
         // Push new article into articles array
         articles.push(dataToAdd);
       }
-    });
+    );
     return articles;
   });
 };

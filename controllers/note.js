@@ -12,10 +12,15 @@ module.exports = {
   // Create a new note
   create: function(req, res) {
    TODO:
-    
+   db.Note.create(req.body).then(function(dbNote) {
+    res.json(dbNote);
+  });
   },
   // Delete a note with a given id
   delete: function(req, res) {
     TODO:
+    db.Note.remove({ _id: req.params.id }).then(function(dbNote) {
+      res.json(dbNote);
+    });
   }
 };
